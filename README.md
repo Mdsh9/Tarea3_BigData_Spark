@@ -23,12 +23,14 @@ Este proyecto contiene el desarrollo de la Tarea 3 del curso Big Data de la UNAD
 - En la primera celda, instala y configura Spark:
 
 Instalación de Spark en Colab:
+
 !apt-get install openjdk-11-jdk-headless -qq > /dev/null
 !wget -q https://archive.apache.org/dist/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz
 !tar xf spark-3.3.2-bin-hadoop3.tgz
 !pip install -q findspark
 
 Configuración de Spark:
+
 import os
 os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-11-openjdk-amd64"
 os.environ["SPARK_HOME"] = "/content/spark-3.3.2-bin-hadoop3"
@@ -46,10 +48,12 @@ spark = SparkSession.builder.master("local[*]").appName("Tarea3_BigData").getOrC
   - AB_NYC_2019.csv
 
 Puedes usar:
+
 from google.colab import files
 uploaded = files.upload()
 
 3. Ejecutar procesamiento batch
+   
 Corre el contenido del archivo procesamiento_batch.py:
 
 %run procesamiento_batch.py
@@ -61,6 +65,7 @@ Este script:
 - Guarda los resultados en archivos CSV.
 
 4. Ejecutar simulación de streaming
+   
 Corre el contenido del archivo simulacion_streaming.py:
 
 %run simulacion_streaming.py
